@@ -1,758 +1,745 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- animation -->
+    <title>Youssef Azam | Data Engineer Portfolio</title>
+    <meta name="description"
+        content="Data Engineer portfolio for Youssef Azam. Specialized in ETL/ELT pipelines, Apache Spark, Airflow, Snowflake, and Modern Data Stack tools.">
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- icons -->
-     <link rel="stylesheet" href="css/all.min.css">
-    <!-- bootstrap -->
-     <link rel="stylesheet" href="./css/bootstrap.min.css">
-    <!-- css -->
-     <link rel="stylesheet" href="./css/style.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-<body data-bs-spy="scroll">
-    
-    <!-- navbar start -->
- <nav class="navbar navbar-expand-lg fixed-top bg-white">
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
         <div class="container">
-          <a class="navbar-brand" href="#">Yousef Azam</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#header">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
-              </li>    
-              <li class="nav-item">
-                <a class="nav-link" href="#services">Services</a>
-              </li> 
-              <li class="nav-item">
-                <a class="nav-link" href="#experinces">Experinces</a>
-              </li> 
-              <li class="nav-item">
-                <a class="nav-link" href="#projects">Projects</a>
-              </li> 
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Contact</a>
-              </li>         
-            </ul>          
-          </div>
+            <a href="#" class="navbar-brand text-gradient">Youssef.DE</a>
+
+            <div class="nav-controls" style="display: flex; gap: 1rem; align-items: center;">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark/Light Mode">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+                <button class="mobile-menu-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+                <a href="https://drive.google.com/file/d/1AVpEKxg7g3M6KOac7v3eRHuTBO4QyDZX/view?usp=sharing"
+                    target="_blank" class="btn btn-outline"><i class="fa-solid fa-download"></i> Resume</a>
+            </div>
         </div>
-      </nav>  
-    <!-- navbar end -->
-<main>
-    
-    <!-- statr of header section -->
-    <section id="header" class="space1">
-      <div class="container">
-        <div class="row">
-          <div class="col-6">
-            <div class="inner1 text-white my-sm-4 my-md-5">
-              <h2>Hello!</h2>
-             <p class="my-sm-4">i'm <span id="element"></span></p>
+    </nav>
 
-            <div class="icons my-sm-4">
-              <a target="_blank" href="https://www.linkedin.com/in/youssef-azam-%F0%93%82%86-a36816231/"> <i class="fa-brands fa-linkedin"></i></a>
-              <a target="_blank" href="https://github.com/youssef-azam"><i class="fa-brands fa-github"></i></a>
-              <a target="_blank" href="https://www.kaggle.com/yossefazam"><i class="fa-brands fa-kaggle"></i></a>
-              <a target="_blank" href="https://wa.link/a7hdj7"><i class="fa-brands fa-whatsapp" ></i></a>
-              <a target="_blank" href="mailto:youssefazam99@gmail.com"><i class="fab fa-google"></i></a>
-            </div>
-
-            <a href="https://drive.google.com/file/d/1B_yJD3geEn4y1VSq-u2TGgVQdhQb3HK-/view?usp=sharing" target="_blank"><button class="btn rounded-4 ">Download CV <i class="fa-solid fa-download"></i></button></a>
-            
-
-            </div>
-          </div>
-          <div class="col-5">
-            <div class="inner ">
-              <img class="w-100 rounded-4 shadow-lg" src="./images/yousef.jpg" alt="">
-            </div>
-          </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape-1"></div>
+            <div class="shape-2"></div>
         </div>
-      </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="hero-subtitle">Hello, I'm Youssef Azam</div>
+                    <h1>I build scalable <br><span class="text-gradient">Data Platforms</span></h1>
+                    <h2 class="hero-subtitle mt-2">I am a <span id="typing-text" class="text-gradient"></span><span
+                            class="cursor">|</span></h2>
+
+                    <p class="hero-description">
+                        Specialized in designing robust data warehouses, ETL/ELT pipelines, and optimized data models to
+                        enable data-driven decision-making.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View Projects</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/youssef-azam-a36816231/" target="_blank"
+                            class="social-icon"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/youssef-azam-tach" target="_blank" class="social-icon"><i
+                                class="fa-brands fa-github"></i></a>
+                        <a href="https://www.kaggle.com/yossefazam" target="_blank" class="social-icon"><i
+                                class="fa-brands fa-kaggle"></i></a>
+                        <a href="mailto:youssefazam99@gmail.com" class="social-icon"><i
+                                class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="hero-image-container" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="hero-image-backdrop"></div>
+                    <!-- Ensure the image exists, otherwise fallback to generic tech image or gradient block -->
+                    <img src="./assets/yousef.jpg" alt="Youssef Azam" class="hero-image"
+                        onerror="this.src='https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                </div>
+            </div>
+        </div>
     </section>
-    <!-- end of header section -->
 
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">About Me</h2>
+            <div class="about-grid">
+                <div class="about-stats" data-aos="fade-right">
+                    <div class="stat-card">
+                        <div class="stat-number">2+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Data Projects</div>
+                    </div>
+                    <div class="stat-card" style="grid-column: span 2;">
+                        <div class="stat-number text-gradient">DP-600 & DP-700</div>
+                        <div class="stat-label">Microsoft Certified</div>
+                    </div>
+                </div>
 
-    <!-- start of about section -->
-        <section id="about" class="space">
-            <div class="container">
-              <div class="h2-section">
-                <h2 class="fw-bold h1">About Me</h2>
-              </div>
-                <div class="row">
-                  <div class="col-xl-12">
-                    <div class="inner shadow-sm rounded-5" >                        
-                        <p>
-                          I am <span class="fw-bolder">Youssef Azam Mahfouz</span>, a skilled Business Intelligence Developer with a strong background in data analysis, machine learning, and data visualization. I have hands-on experience in designing and implementing data warehouses, ETL processes, and creating interactive dashboards using tools like Power BI, Tableau, and SQL. 
+                <div class="about-text" data-aos="fade-left" data-aos-delay="200">
+                    <p>
+                        I am a <strong>Data Engineer</strong> with hands-on experience building scalable data platforms and processing
+                        large-scale datasets using <strong>Apache Spark</strong> and modern data stack tools. I specialize in designing
+                        <strong>data warehouses</strong>, <strong>ETL/ELT pipelines</strong>, and <strong>optimized data models</strong> for analytical and operational use
+                        cases.
+                    </p>
+                    <p>
+                        I have a proven ability to process tens of millions of records, optimize query performance, and
+                        enable data-driven decision-making across multiple domains. Skilled in <strong>Python</strong>, <strong>PostgreSQL</strong>, and
+                        cloud-based data platforms including <strong>AWS</strong> and <strong>Databricks</strong>.
+                    </p>
+                    <p>
+                        Currently, I am working at <strong>CORELIA</strong> building data infrastructure for <strong>AI pipelines</strong> and
+                        implementing large-scale ETL architectures. I am deeply passionate about modern data engineering
+                        practices, <strong>streaming architectures</strong>, and unlocking value from raw data.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Freelance Services Section -->
+    <section id="services" class="section-padding" style="background-color: var(--bg-tertiary);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Freelance & Consulting Services</h2>
+
+            <div class="services-intro text-center mb-5" data-aos="fade-up" data-aos-delay="100">
+                <p
+                    style="max-width: 800px; margin: 0 auto; color: var(--text-secondary); font-size: 1.1rem; line-height: 1.8;">
+                    I have successfully delivered <strong>over 12 freelance projects</strong> across Data Analytics,
+                    Data Engineering, and LLM solutions. Working with clients from Saudi Arabia and internationally, I
+                    provide reliable, end-to-end data architectures tailored to solve real business challenges.
+                </p>
+            </div>
+
+            <div class="services-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; margin-bottom: 3rem;">
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="200"
+                    style="background: var(--bg-secondary); padding: 2rem; border-radius: 16px; border: 1px solid var(--border-color); text-align: center; transition: transform 0.3s ease;">
+                    <i class="fa-solid fa-chart-line text-gradient"
+                        style="font-size: 2.5rem; margin-bottom: 1.5rem; display: inline-block;"></i>
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.3rem;">BI & Analytics</h3>
+                    <ul style="color: var(--text-secondary); text-align: left; list-style: none;">
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 10px;"><i
+                                class="fa-solid fa-check text-gradient" style="margin-top: 5px;"></i> <span>Data
+                                analytics dashboards and reporting</span></li>
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 10px;"><i
+                                class="fa-solid fa-check text-gradient" style="margin-top: 5px;"></i> <span>Power BI and
+                                Tableau dashboards</span></li>
+                    </ul>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300"
+                    style="background: var(--bg-secondary); padding: 2rem; border-radius: 16px; border: 1px solid var(--border-color); text-align: center; transition: transform 0.3s ease;">
+                    <i class="fa-solid fa-database text-gradient"
+                        style="font-size: 2.5rem; margin-bottom: 1.5rem; display: inline-block;"></i>
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.3rem;">Data Engineering</h3>
+                    <ul style="color: var(--text-secondary); text-align: left; list-style: none;">
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 10px;"><i
+                                class="fa-solid fa-check text-gradient" style="margin-top: 5px;"></i> <span>ETL / ELT
+                                pipeline development</span></li>
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 10px;"><i
+                                class="fa-solid fa-check text-gradient" style="margin-top: 5px;"></i> <span>Data
+                                warehouse design</span></li>
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 10px;"><i
+                                class="fa-solid fa-check text-gradient" style="margin-top: 5px;"></i> <span>SQL
+                                optimization and database solutions</span></li>
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 10px;"><i
+                                class="fa-solid fa-check text-gradient" style="margin-top: 5px;"></i> <span>Data
+                                cleaning and automation</span></li>
+                    </ul>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400"
+                    style="background: var(--bg-secondary); padding: 2rem; border-radius: 16px; border: 1px solid var(--border-color); text-align: center; transition: transform 0.3s ease;">
+                    <i class="fa-solid fa-robot text-gradient"
+                        style="font-size: 2.5rem; margin-bottom: 1.5rem; display: inline-block;"></i>
+                    <h3 style="margin-bottom: 1.5rem; font-size: 1.3rem;">AI & Backend</h3>
+                    <ul style="color: var(--text-secondary); text-align: left; list-style: none;">
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 10px;"><i
+                                class="fa-solid fa-check text-gradient" style="margin-top: 5px;"></i> <span>LLM-powered
+                                chatbot solutions</span></li>
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 10px;"><i
+                                class="fa-solid fa-check text-gradient" style="margin-top: 5px;"></i> <span>RAG-based
+                                knowledge assistants</span></li>
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 10px;"><i
+                                class="fa-solid fa-check text-gradient" style="margin-top: 5px;"></i> <span>Backend APIs
+                                for data products</span></li>
+                        <li style="margin-bottom: 0.8rem; display: flex; align-items: flex-start; gap: 10px;"><i
+                                class="fa-solid fa-check text-gradient" style="margin-top: 5px;"></i> <span>End-to-end
+                                data solutions for businesses</span></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Technical Expertise</h2>
+
+            <div class="skills-container">
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <h3><i class="fa-solid fa-network-wired"></i> Data Engineering & Pipelines</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ETL / ELT Pipelines</span>
+                        <span class="skill-tag">Batch Processing</span>
+                        <span class="skill-tag">API Data Ingestion</span>
+                        <span class="skill-tag">Airflow</span>
+                        <span class="skill-tag">dbt</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <h3><i class="fa-solid fa-server"></i> Big Data & Streaming</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Apache Spark (PySpark)</span>
+                        <span class="skill-tag">Kafka</span>
+                        <span class="skill-tag">Hadoop Ecosystem</span>
+                        <span class="skill-tag">Hive</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <h3><i class="fa-solid fa-cloud"></i> Cloud & Infrastructure</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Databricks</span>
+                        <span class="skill-tag">Microsoft Fabric</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">MinIO</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                    <h3><i class="fa-solid fa-database"></i> Databases & Storage</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Snowflake</span>
+                        <span class="skill-tag">Query Optimization</span>
+                        <span class="skill-tag">Partitioning</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
+                    <h3><i class="fa-solid fa-project-diagram"></i> Data Modeling</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Star Schema</span>
+                        <span class="skill-tag">Snowflake Schema</span>
+                        <span class="skill-tag">Dimensional Modeling</span>
+                        <span class="skill-tag">ERD</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="600">
+                    <h3><i class="fa-solid fa-chart-pie"></i> BI & Analytics</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">SSIS / SSAS</span>
+                        <span class="skill-tag">Oracle BI</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="700">
+                    <h3><i class="fa-solid fa-code"></i> Programming</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python (Pandas, NumPy)</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">C++ / OOP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Professional Experience</h2>
+
+            <div class="timeline">
+                <!-- Corelia -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-title">Data Engineer – Data Platforms & Pipelines</h3>
+                                <div class="timeline-company">CORELIA | Cairo, Maadi</div>
+                            </div>
+                            <div class="timeline-date">09/2024 – Present</div>
+                        </div>
+                        <div class="timeline-desc">
+                            <p><strong>Data Engineering & Data Platforms Project:</strong></p>
+                            <ul>
+                                <li>Designed and implemented large-scale ETL pipelines using Apache Spark to ingest data
+                                    from external APIs into PostgreSQL, processing millions of records.</li>
+                                <li>Optimized data storage and query performance using indexing, query tuning, and
+                                    partitioning.</li>
+                                <li>Built data-serving APIs as a lightweight data access layer using FastAPI.</li>
+                            </ul>
+                            <p class="mt-2"><strong>Data Infrastructure for AI Pipelines Project:</strong></p>
+                            <ul>
+                                <li>Designed data ingestion for AI-based 3D video processing workflows.</li>
+                                <li>Implemented object storage architecture using MinIO and persisted metadata/lineage
+                                    in PostgreSQL.</li>
+                            </ul>
+                            <div class="project-tech mt-3" style="margin-top: 1rem;">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Apache Spark</span>
+                                <span class="tech-tag">PySpark</span>
+                                <span class="tech-tag">Data Modeling</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                                <span class="tech-tag">FastAPI</span>
+                                <span class="tech-tag">MinIO</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">REST APIs</span>
+                                <span class="tech-tag">ETL Pipeline Design</span>
+                                <span class="tech-tag">Query Optimization</span>
+                                <span class="tech-tag">Power BI</span>
+                                <span class="tech-tag">Data Lifecycle Tracking</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Masria Digital -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-title">Data Analytics Intern</h3>
+                                <div class="timeline-company">Masria Digital Payments | Cairo, Egypt</div>
+                            </div>
+                            <div class="timeline-date">08/2024 – 09/2024</div>
+                        </div>
+                        <div class="timeline-desc">
+                            <ul>
+                                <li>Worked extensively with Tableau and SQL for business reporting.</li>
+                                <li>Focused on optimizing SQL queries to enhance performance and analytics efficiency.
+                                </li>
+                            </ul>
+                            <div class="project-tech mt-3" style="margin-top: 1rem;">
+                                <span class="tech-tag">Tableau</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">Power BI</span>
+                                <span class="tech-tag">Excel</span>
+                                <span class="tech-tag">Business Reporting</span>
+                                <span class="tech-tag">Query Optimization</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Best One -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-title">Data Analyst</h3>
+                                <div class="timeline-company">Best One | Remote, Saudi Arabia</div>
+                            </div>
+                            <div class="timeline-date">06/2023 – 05/2024</div>
+                        </div>
+                        <div class="timeline-desc">
+                            <ul>
+                                <li>Conducted extensive data analysis for shipping, import, and export companies.</li>
+                                <li>Utilized Power BI, Power Query, and Excel for analyzing large datasets, identifying
+                                    operational trends, and improving efficiency.</li>
+                            </ul>
+                            <div class="project-tech mt-3" style="margin-top: 1rem;">
+                                <span class="tech-tag">Power BI</span>
+                                <span class="tech-tag">Power Query</span>
+                                <span class="tech-tag">Excel</span>
+                                <span class="tech-tag">Data Analysis</span>
+                                <span class="tech-tag">Operational Trends</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Credit Agricole -->
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <h3 class="timeline-title">Data Scientist & BI Developer Intern</h3>
+                                <div class="timeline-company">Credit Agricole Egypt | Cairo, Egypt</div>
+                            </div>
+                            <div class="timeline-date">08/2023 – 09/2023</div>
+                        </div>
+                        <div class="timeline-desc">
+                            <ul>
+                                <li>Interned in the Digital Banking department, gaining hands-on experience in BI and
+                                    Data Warehousing.</li>
+                                <li>Built an RFM model using Oracle Data Mining for customer segmentation.</li>
+                            </ul>
+                            <div class="project-tech mt-3" style="margin-top: 1rem;">
+                                <span class="tech-tag">Oracle Data Mining</span>
+                                <span class="tech-tag">BI</span>
+                                <span class="tech-tag">Data Warehousing</span>
+                                <span class="tech-tag">RFM Modeling</span>
+                                <span class="tech-tag">Customer Segmentation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding" style="background-color: var(--bg-tertiary);">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Featured Projects</h2>
+
+            <div class="projects-grid">
+
+                <!-- Chatbot -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-img-container">
+                        <img src="./assets/chatbot_project.jpg" alt="Enterprise Arabic Chatbot" class="project-img">
+                        <div class="project-overlay">
+                            <a href="#" class="btn btn-primary"><i class="fa-solid fa-link"></i> View Project</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-date">Jan 2026 – Mar 2026</div>
+                        <h3 class="project-title">Enterprise Arabic Chatbot</h3>
+                        <p class="project-desc">Built an Arabic AI chatbot using LLMs (Ollama) with RAG for
+                            domain-specific Q&A. Developed a complete data pipeline from Excel ingestion to vector
+                            database indexing, deployed via scalable FastAPI and Docker.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">LLMs/RAG</span>
+                            <span class="tech-tag">Vector DB</span>
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">Docker</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Drowsiness Detection -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-img-container">
+                        <img src="./assets/drowsiness_project.png" alt="Real-Time Drowsiness Detection"
+                            class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://github.com/youssef-azam-tach/Real-Time-Drowsiness-Detection-System" target="_blank" class="btn btn-primary"><i class="fa-brands fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-date">Aug 2024 – May 2025</div>
+                        <h3 class="project-title">Real-Time AI Drowsiness Detection</h3>
+                        <p class="project-desc">Developed a live eye-tracking system using AI vision models on Raspberry
+                            Pi. Built a real-time data streaming pipeline using Kafka, Spark Streaming, PostgreSQL, and
+                            Debezium, monitored via Grafana.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Kafka</span>
+                            <span class="tech-tag">Spark Streaming</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Debezium</span>
+                            <span class="tech-tag">Grafana</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job Market Analytics -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-img-container">
+                        <img src="./assets/job_market_project.png" alt="Job Market Analytics Data Warehouse"
+                            class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://github.com/youssef-azam-tach/Data-pipeline-airflow-spark-postgres-" target="_blank" class="btn btn-primary"><i class="fa-brands fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-date">Jul 2025</div>
+                        <h3 class="project-title">Job Market Analytics DWH</h3>
+                        <p class="project-desc">Automated ELT pipeline extracting multi-source job data using Airflow.
+                            Architected a Snowflake data warehouse and managed complex transformations using dbt,
+                            upgrading from a legacy single-source ETL design.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Airflow</span>
+                            <span class="tech-tag">Spark</span>
+                            <span class="tech-tag">Snowflake</span>
+                            <span class="tech-tag">dbt</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Supermarket DWH -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-img-container">
+                        <div class="image-slider">
+                            <img src="./assets/p6.jpg" alt="Supermarket Data Warehouse" class="project-img">
+                            <img src="./assets/p100.jpg" alt="Supermarket Data Warehouse 2" class="project-img">
+                            <img src="./assets/p1000.jpg" alt="Supermarket Data Warehouse 3" class="project-img">
+                            <img src="./assets/p10000.jpg" alt="Supermarket Data Warehouse 4" class="project-img">
+                        </div>
+                        <button class="slider-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="slider-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                        <div class="project-overlay">
+                            <a href="https://github.com/youssef-azam-tach/Data-Warehouse-and-ETL-Project" target="_blank"
+                                class="btn btn-primary"><i class="fa-brands fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-date">Apr 2024 – May 2024</div>
+                        <h3 class="project-title">Supermarket DWH Solution</h3>
+                        <p class="project-desc">Designed an ERD schema for supermarket operations. Built a data
+                            warehouse and implemented ETL processes using SSIS. Developed interactive Power BI reports
+                            to deliver actionable business intelligence.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">SQL Server</span>
+                            <span class="tech-tag">SSIS</span>
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">Dimensional Modeling</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Financial Insights -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-img-container">
+                        <div class="image-slider">
+                            <img src="./assets/p8.jpg" alt="Financial Insights Power BI" class="project-img">
+                            <img src="./assets/p88.jpg" alt="Financial Insights 2" class="project-img">
+                            <img src="./assets/p888.jpg" alt="Financial Insights 3" class="project-img">
+                            <img src="./assets/p8888.jpg" alt="Financial Insights 4" class="project-img">
+                        </div>
+                        <button class="slider-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="slider-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                        <div class="project-overlay">
+                            <a href="https://github.com/youssef-azam-tach/Financial-Insights-with-Power-BI" target="_blank"
+                                class="btn btn-primary"><i class="fa-brands fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-date">Data Analytics</div>
+                        <h3 class="project-title">Financial Insights Dashboard</h3>
+                        <p class="project-desc">Leveraged Power BI to create dynamic financial reports offering a
+                            comprehensive overview of crucial financial metrics. The dashboard provides an intuitive
+                            interface to explore performance across various dimensions.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">DAX</span>
+                            <span class="tech-tag">Data Visualization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Breast Cancer Analysis -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-img-container">
+                        <div class="image-slider">
+                            <img src="./assets/p11.jpg" alt="Breast Cancer Analysis" class="project-img">
+                            <img src="./assets/p111.jpg" alt="Breast Cancer Analysis 2" class="project-img">
+                            <img src="./assets/p1111.jpg" alt="Breast Cancer Analysis 3" class="project-img">
+                        </div>
+                        <button class="slider-btn prev"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="slider-btn next"><i class="fa-solid fa-chevron-right"></i></button>
+                        <div class="project-overlay">
+                            <a href="https://github.com/youssef-azam-tach/Breast-Cancer-Analysis-using-Power-bi" target="_blank"
+                                class="btn btn-primary"><i class="fa-brands fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-date">Machine Learning / BI</div>
+                        <h3 class="project-title">Breast Cancer Analysis</h3>
+                        <p class="project-desc">Analyzed breast cancer dataset to categorize condition stages based on
+                            tumor response to estrogen receptors. Assisted in providing data-driven insights for medical
+                            diagnostics.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Power BI</span>
+                            <span class="tech-tag">Data Analytics</span>
+                            <span class="tech-tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media Sentiments -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="700">
+                    <div class="project-img-container">
+                        <img src="./assets/p1.jpg" alt="Social Media Sentiments Analysis" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://github.com/youssef-azam-tach/Social-Media-Sentiments-Analysis" target="_blank"
+                                class="btn btn-primary"><i class="fa-brands fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-date">NLP / ML</div>
+                        <h3 class="project-title">Social Media Sentiment Analysis</h3>
+                        <p class="project-desc">Developed an NLP-based sentiment analysis system to understand and
+                            classify user sentiments from social media platforms, enabling organizations to derive
+                            qualitative insights.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">NLP</span>
+                            <span class="tech-tag">Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="edu-cert-container">
+
+                <div data-aos="fade-right">
+                    <h2 class="section-title" style="text-align: left;">Education</h2>
+                    <div class="edu-card">
+                        <h4>Bachelor’s in Computers & Artificial Intelligence</h4>
+                        <div class="edu-inst">Beni-Suef University</div>
+                        <div class="edu-date">2021 – 06/2025 | Cumulative GPA: 3.16 / 4</div>
+                        <p class="mt-2 text-secondary"
+                            style="font-size: 0.95rem; margin-top: 10px; color: var(--text-secondary);">
+                            <strong>Activities:</strong> Participated in the Egyptian Collegiate Programming Contest
+                            (ECPC) 2022 & 2023. Core Team Data Science at GDSC Al-Azhar University.
                         </p>
-                        <p >
-                           Currently, I am expanding my knowledge in Big Data technologies, including Hadoop, Spark, and Kafka, to enhance my ability to manage and analyze large-scale data efficiently.
-                        </p> 
-                                                         
                     </div>
-                </div>                                
+                </div>
+
+                <div data-aos="fade-left">
+                    <h2 class="section-title" style="text-align: left;">Certifications</h2>
+
+                    <div class="edu-card">
+                        <h4>Microsoft Certified: Azure Data Engineer Associate (DP-700)</h4>
+                        <div class="edu-inst">Microsoft</div>
+                        <a href="#" class="btn btn-outline"
+                            style="padding: 0.4rem 1rem; font-size: 0.85rem; margin-top: 1rem;">View Certificate <i
+                                class="fa-solid fa-arrow-up-right-from-square" style="margin-left: 5px;"></i></a>
+                    </div>
+
+                    <div class="edu-card">
+                        <h4>Microsoft Certified: Fabric Analytics Engineer Associate (DP-600)</h4>
+                        <div class="edu-inst">Microsoft</div>
+                        <a href="#" class="btn btn-outline"
+                            style="padding: 0.4rem 1rem; font-size: 0.85rem; margin-top: 1rem;">View Certificate <i
+                                class="fa-solid fa-arrow-up-right-from-square" style="margin-left: 5px;"></i></a>
+                    </div>
+
+                    <div class="edu-card">
+                        <h4>IBM Data Science Practical Machine Learning</h4>
+                        <div class="edu-inst">IBM</div>
+                        <a href="#" class="btn btn-outline"
+                            style="padding: 0.4rem 1rem; font-size: 0.85rem; margin-top: 1rem;">View Certificate <i
+                                class="fa-solid fa-arrow-up-right-from-square" style="margin-left: 5px;"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="contact-box" data-aos="zoom-in">
+                <h2>Let's build something great</h2>
+                <p>I am currently open to freelance projects, consulting work, and full-time Data Engineer
+                    opportunities. Whether you need a tailored freelance data solution or a dedicated team member, I am
+                    ready to deliver practical solutions for your business problems.</p>
+
+                <div class="contact-ctas"
+                    style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 2.5rem;">
+                    <a href="mailto:youssefazam99@gmail.com?subject=Freelance%20Project%20Inquiry"
+                        class="btn btn-primary">Hire me for a freelance project</a>
+                    <a href="mailto:youssefazam99@gmail.com?subject=Full-Time%20Data%20Engineer%20Opportunity"
+                        class="btn btn-outline">Contact for full-time role</a>
+                </div>
+
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:youssefazam99@gmail.com">youssefazam99@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:+201040787628">+20 1040787628</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Maadi, Cairo, Egypt</span>
+                    </div>
                 </div>
             </div>
 
-        </section>
-    <!-- end of about section -->
-
-
-   <!-- start of services section -->
-        <section id="services" class="space">
-          <div class="container">
-            <div class="h2-section">
-              <h2 class="fw-bold h1">Services</h2>
+            <div class="footer-socials">
+                <a href="https://www.linkedin.com/in/youssef-azam-%F0%93%82%86-a36816231/" target="_blank"><i
+                        class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/youssef-azam" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.kaggle.com/yossefazam" target="_blank"><i class="fa-brands fa-kaggle"></i></a>
+                <a href="https://api.whatsapp.com/send?phone=201040787628" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
-            <div class="row g-4">
-              <div class="col-12">
-                <div class="inner rounded-5" data-aos="fade-down" data-aos-duration="1000" >
-                  <h3 class="pb-3">Data Analysis and Visualization :</h3>
-                  <p>
-                    Unlock the potential of your data with comprehensive analysis and visualization.
-                     I specialize in transforming raw data into actionable insights using advanced statistical techniques and visual tools like Tableau, Power BI,
-                     and Python libraries. Let me help you make data-driven decisions with clarity and precision.
-                  </p>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="inner rounded-5" data-aos="fade-down" data-aos-duration="1000">
-                  <h3 class="pb-3">Predictive Analytics and Machine Learning :</h3>
-                  <p>
-                    Stay ahead of the curve with predictive analytics and machine learning solutions.
-                     I design and implement models that forecast trends, identify risks, and optimize operations.
-                      Using cutting-edge algorithms and tools, I can help you predict customer behavior,
-                       streamline processes, and increase profitability
-                  </p>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="inner rounded-5" data-aos="fade-down"  data-aos-duration="1000">
-                  <h3 class="pb-3">Business Intelligence (BI) Solutions :</h3>
-                  <p>
-                    Empower your business with customized BI solutions that provide real-time insights and drive performance.
-                     I develop and manage BI systems that integrate data from various sources,
-                      creating dashboards and reports that enable you to monitor key metrics and make informed strategic decisions.
-                  </p>
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="inner rounded-5"data-aos="fade-down" data-aos-duration="1000" >
-                  <h3 class="pb-3">Data Cleaning and Preparation :</h3>
-                  <p>
-                    Ensure the accuracy and reliability of your data with expert data cleaning and preparation services.
-                     I specialize in identifying and rectifying data inconsistencies, missing values,
-                      and outliers. My approach ensures your datasets are ready for analysis, providing a solid foundation for any data-driven project.
-                  </p>
-                </div>
-              </div>
+
+            <div class="copyright">
+                &copy; 2026 Youssef Azam. All rights reserved.
             </div>
-          </div>
+        </div>
+    </footer>
 
-        </section>
-   <!-- end of services section -->
-    
-
-   <!-- start of skills and experinces section -->
-        <section id="experinces" class="space">
-          <div class="container">
-            <div class="h2-section">
-              <h2 class="fw-bold h1">Skills & Experinces</h2>
-            </div>
-            <div class="row g-5">
-              <div class="col-xl-6">
-                <div class="skills rounded-5 bg-white py-4 d-flex flex-column justify-content-center align-items-center" >
-                  <h3 class="fs-2 fw-bold">Skills</h3>
-                  <div class="prog rounded-3  w-75 m-auto p-2 my-3" data-aos="fade-down" data-aos-duration="1500">
-                    <p class="mb-1 fw-bold">Data Warehousing</p>
-                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                      <div class="progress-bar " style="width: 90%">90%</div>
-                    </div>
-                  </div>
-                  <div class="prog rounded-3  w-75 m-auto p-2 my-3" data-aos="fade-down" data-aos-duration="1500">
-                    <p class="mb-1 fw-bold">Business Intelligence Tools</p>
-                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                      <div class="progress-bar " style="width: 95%">95%</div>
-                    </div>
-                  </div>
-                  <div class="prog rounded-3  w-75 m-auto p-2 my-3" data-aos="fade-down" data-aos-duration="1500">
-                    <p class="mb-1 fw-bold">Programming Languages</p>
-                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-                      <div class="progress-bar " style="width: 90%">90%</div>
-                    </div>
-                  </div>
-                  <div class="prog rounded-3  w-75 m-auto p-2 my-3" data-aos="fade-down" data-aos-duration="1500">
-                    <p class="mb-1 fw-bold">Data Analysis</p>
-                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100">
-                      <div class="progress-bar " style="width: 98%">98%</div>
-                    </div>
-                  </div>
-                  <div class="prog rounded-3  w-75 m-auto p-2 my-3"data-aos="fade-down" data-aos-duration="1500">
-                    <p class="mb-1 fw-bold">ETL Tools (SSIS,Informatica PowerCenter)</p>
-                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                      <div class="progress-bar " style="width: 75%">75%</div>
-                    </div>
-                  </div>
-                  <div class="prog rounded-3  w-75 m-auto p-2 my-3" data-aos="fade-down" data-aos-duration="1500">
-                    <p class="mb-1 fw-bold">Machine Learning</p>
-                    <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                      <div class="progress-bar " style="width: 80%">80%</div>
-                    </div>
-                  </div>
-                  
-                  
-                </div>
-              </div>
-              <div class="col-xl-6">
-                <div class="experinces bg-white rounded-5 p-4  d-flex flex-column justify-content-center align-items-center" >
-                  <h3 class="fs-2 fw-bold mb-3 ">Experinces</h3>
-                  <div class="experinces1">
-                    <!-- start 1 -->
-                    <h4 class="mb-0 mt-3">
-                      1 - Best One   - Remote, Saudi Arabia
-                      06/2023 – 05/2024
-                    </h4>
-                    <span class="fs-5 fw-bold ">Data Analyst</span>
-                    <p>
-                      • Extensive experience in data analysis for shipping, import, and export companies, with proficiency in Excel, Power BI, and Power Query for analyzing large datasets, identifying trends, and optimizing operational efficiency.
-                    </p>
-                    <!-- end 1 -->
-
-                    <!-- start 2 -->
-                    <h4 class="mt-3 mb-0">
-                      2 - Credit Agricole Egypt
-                      08/2023 – 09/2023
-                    </h4>
-                    <span class="fs-5 fw-bold ">Data scientist / BI Developer</span>
-                    <p>
-                      • During this internship, I gained experience in Oracle Data Mining, Oracle Business Intelligence, Data Warehousing, and RFM Modeling.
-                    </p>
-                    <!-- end 2 -->
-
-                    <!-- start 3 -->
-                    <h4 class="mt-3 mb-0">3 - masria digital payments  08/2024 – 9/2024
-                    </h4>
-                    <span class="fs-5 fw-bold">Data Analytic</span>
-                    <p>
-                      • During this internship, I learned SQL, Tableau, and how to optimize queries for better performance.
-                    </p>
-                    <!-- end 3 -->
-                    
-                    <!-- start 4 -->
-                     <h4 class="mt-3 mb-0">4 - CORELIA 9/2024 - present 
-                    </h4>
-                    <span class="fs-5 fw-bold ">Data Engineer& Business Intelligence
-                    </span>
-                    <p>
-                      • In this role, I work on data analysis and utilize BI tools such as Power BI, SSIS,
-                       along with Python and SQL for efficient data processing and insights.
-                    </p>                 
-                    <!-- end 4 -->
-                    
-                  </div>   
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-   <!-- end of skills and experinces section -->
-
-
-   <!-- start of portfolio section -->
-        <div id="projects" class="space ">
-          <div class="container">
-            <div class="h2-section">
-              <h2 class="fw-bold h1">Projects</h2>
-            </div>
-            <div class="row g-4">
-              <div class="col-md-6 col-lg-4 col-xl-3">
-                <div class="project " data-bs-toggle="modal" data-bs-target="#exampleModal1">
-                  <img class="w-100 rounded-4" src="images/p1.jpg" alt="">
-                  <div class="layer rounded-4 bg-white  d-flex justify-content-center align-items-center flex-column">
-                    <p class="fw-bold fs-4">Python</p>
-                    <p class="fw-bold fs-6">Social Media Sentiments Analysis.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 col-xl-3">
-                <div class="project " data-bs-toggle="modal" data-bs-target="#exampleModal2">
-                  <img class="w-100 rounded-4" src="images/p2.jpg" alt="">
-                  <div class="layer rounded-4 bg-white  d-flex justify-content-center align-items-center flex-column">
-                    <p class="fw-bold fs-4">Python</p>
-                    <p class="fw-bold fs-6 mb-0">Diabetes Gradient </p>
-                    <p class="fw-bold fs-6 ">Boosting Begging. </p>
-                    
-                  </div>
-                </div>
-                
-              </div>
-              <div class="col-md-6 col-lg-4 col-xl-3">
-                <div class="project " data-bs-toggle="modal" data-bs-target="#exampleModal3">
-                  <img class="w-100 rounded-4" src="images/p3.jpg" alt="">
-                  <div class="layer rounded-4 bg-white  d-flex justify-content-center align-items-center flex-column">
-                    <p class="fw-bold fs-4">Python</p>
-                    <p class="fw-bold fs-6">Bus Ride Booking.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 col-xl-3">
-                <div class="project " data-bs-toggle="modal" data-bs-target="#exampleModal4">
-                  <img class="w-100 rounded-4" src="images/p4.jpg" alt="">
-                  <div class="layer rounded-4 bg-white  d-flex justify-content-center align-items-center flex-column">
-                    <p class="fw-bold fs-4">Python</p>
-                    <p class="fw-bold fs-6">Crdit Card Approval</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 col-xl-3">
-                <div class="project " data-bs-toggle="modal" data-bs-target="#exampleModal5">
-                  <img class="w-100 rounded-4" src="images/p5.jpg" alt="">
-                  <div class="layer rounded-4 bg-white  d-flex justify-content-center align-items-center flex-column">
-                    <p class="fw-bold fs-4">SQL</p>
-                    <p class="fw-bold fs-6 mb-0">Agricultural Association</p>
-                    <p class="fw-bold fs-6">Management System</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 col-xl-3">
-                <div class="project " data-bs-toggle="modal" data-bs-target="#exampleModal6">
-                  <img class="w-100 rounded-4" src="images/p6.jpg" alt="">
-                  <div class="layer rounded-4 bg-white  d-flex justify-content-center align-items-center flex-column">
-                    <p class="fw-bold fs-4">SQL</p>
-                    <p class="fw-bold fs-6 mb-0">Supermarket Management</p>
-                    <p class="fw-bold fs-6">System Database.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 col-xl-3">
-                <div class="project " data-bs-toggle="modal" data-bs-target="#exampleModal7">
-                  <img class="w-100 rounded-4" src="images/p7.jpg" alt="">
-                  <div class="layer rounded-4 bg-white  d-flex justify-content-center align-items-center flex-column">
-                    <p class="fw-bold fs-4">Power BI/Tableau</p>
-                    <p class="fw-bold fs-6">Data Warehouse Supermarket</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 col-xl-3">
-                <div class="project " data-bs-toggle="modal" data-bs-target="#exampleModal8">
-                  <img class="w-100 rounded-4" src="images/p8.jpg" alt="">
-                  <div class="layer rounded-4 bg-white  d-flex justify-content-center align-items-center flex-column">
-                    <p class="fw-bold fs-4">Power BI/Tableau</p>
-                    <p class="fw-bold fs-6">Financial Insights with Power BI.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 col-xl-3">
-                <div class="project " data-bs-toggle="modal" data-bs-target="#exampleModal9">
-                  <img class="w-100 rounded-4" src="images/p9.jpg" alt="">
-                  <div class="layer rounded-4 bg-white  d-flex justify-content-center align-items-center flex-column">
-                    <p class="fw-bold fs-4">Power BI/Tableau</p>
-                    <p class="fw-bold fs-6">Sales Analysis</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 col-xl-3">
-                <div class="project " data-bs-toggle="modal" data-bs-target="#exampleModal10">
-                  <img class="w-100 rounded-4" src="images/p10.jpg" alt="">
-                  <div class="layer rounded-4 bg-white  d-flex justify-content-center align-items-center flex-column">
-                    <p class="fw-bold fs-4">Business intelligence</p>
-                    <p class="fw-bold fs-6">Data Warehouse Supermarket.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 col-xl-3">
-                <div class="project " data-bs-toggle="modal" data-bs-target="#exampleModal11">
-                  <img class="w-100 rounded-4" src="images/p11.jpg" alt="">
-                  <div class="layer rounded-4 bg-white  d-flex justify-content-center align-items-center flex-column">
-                    <p class="fw-bold fs-4">Power BI/Tableau</p>
-                    <p class="fw-bold fs-6 mb-0">Breast Cancer Analysis </p>
-                    <p class="fw-bold fs-6">Using Power bi. </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-4 col-xl-3">
-                <div class="project " data-bs-toggle="modal" data-bs-target="#exampleModal12">
-                  <img class="w-100 rounded-4" src="images/p12.jpg" alt="">
-                  <div class="layer rounded-4 bg-white  d-flex justify-content-center align-items-center flex-column">
-                    <p class="fw-bold fs-4">Excel</p>
-                    <p class="fw-bold fs-6 mb-0">Healthcare Facility Staff Analysis</p>
-                    <p class="fw-bold fs-6">Using Excel.</p>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-   <!-- end of portfolio section -->
-   
-
-   <!-- model start  -->
-   <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-4 fw-bold" id="exampleModalLabel">Data Analysis and Visualization</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body bg-secondary bg-opacity-10 ">
-            <h2 class="fs-6">
-              <span class="fw-bold">Project:</span> Social Media Sentiments Analysis.
-            </h2>    
-          <h3 class="fs-6 mt-3">
-            <span class="fw-bold">Description:</span> We aim to develop a Social Media Sentiment Analysis system to assist organizations, including platforms like Facebook and Twitter.
-             The objective is to understand and analyze user sentiments, enabling the organization to better serve users by providing the information or objects they are searching for.
-          </h3>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <a target="_blank" href="https://github.com/youssef-azam/Social-Media-Sentiments-Analysis"><button type="button" class="btn btn-primary">Go To Github   <i class="fa-brands fa-github"></i></button></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-4 fw-bold" id="exampleModalLabel2">Predictive Analytics and Machine Learning</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body bg-secondary bg-opacity-10 ">
-            <h2 class="fs-6">
-              <span class="fw-bold">Project:</span>  Diabetes Gradient Boosting Begging.
-            </h2>    
-          <h3 class="fs-6 mt-3">
-            <span class="fw-bold">Description:</span> overview for a project related to diabetes using ensemble learning.
-             Ensemble learning involves combining multiple machine learning models to improve overall performance.
-              Below is a sample outline for a project on diabetes prediction using ensemble learning.
-          </h3>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <a target="_blank" href="https://github.com/youssef-azam/Diabetes-_using-_Ensample_learning"><button type="button" class="btn btn-primary">Go To Github   <i class="fa-brands fa-github"></i></button></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-4 fw-bold" id="exampleModalLabel3">Data Cleaning and Preparation</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body bg-secondary bg-opacity-10 ">
-            <h2 class="fs-6">
-              <span class="fw-bold">Project:</span> Bus Ride Booking.
-            </h2>    
-          <h3 class="fs-6 mt-3">
-            <span class="fw-bold">Description:</span> Description: his project involves analyzing and cleaning a dataset related to bus ride bookings. The data includes various details about each booking such as booking ID, booking source, booking and ride dates,
-             passenger information, booking status, and ride details. The ultimate goal of this project is to conduct exploratory data analysis (EDA) and perform necessary data cleaning to prepare the data for further analysis and insights. 
-          </h3>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <a target="_blank" href="https://github.com/youssef-azam/EDA_Cleaning_Visualization"><button type="button" class="btn btn-primary">Go To Github   <i class="fa-brands fa-github"></i></button></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-4 fw-bold" id="exampleModalLabel4">Data Cleaning and Preparation</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body bg-secondary bg-opacity-10 ">
-            <h2 class="fs-6">
-              <span class="fw-bold">Project:</span> Crdit Card Approval
-            </h2>    
-          <h3 class="fs-6 mt-3">
-            <span class="fw-bold">Description:</span> the objective of the project is to build a model that predicts whether an individual is eligible for Credit Card Approval or not. 
-          </h3>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <a target="_blank" href="https://github.com/youssef-azam/Crdit-Card-Approval"><button type="button" class="btn btn-primary">Go To Github   <i class="fa-brands fa-github"></i></button></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-4 fw-bold" id="exampleModalLabel5">SQL (Data Analysis)</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body bg-secondary bg-opacity-10 ">
-            <h2 class="fs-6">
-              <span class="fw-bold">Project:</span> Agricultural Association Management System
-            </h2>    
-          <h3 class="fs-6 mt-3">
-            <span class="fw-bold">Description:</span>  The Agricultural Association Management System (AAMS) is a comprehensive project developed to manage agricultural associations at a national level. This system aims to streamline the operations and enhance the efficiency of agricultural associations, providing support to managers, associations,
-             agricultural supplies, supervisors, docks, owners, lands, and crops. 
-          </h3>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <a target="_blank" href="https://github.com/youssef-azam/Agricultural_Association_SQL_PROJECT"><button type="button" class="btn btn-primary">Go To Github   <i class="fa-brands fa-github"></i></button></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-4 fw-bold" id="exampleModalLabel6">Business Intelligence BI (SQL)</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body bg-secondary bg-opacity-10 ">
-            <h2 class="fs-6">
-              <span class="fw-bold">Project:</span>  Supermarket Management System Database.
-            </h2>    
-          <h3 class="fs-6 mt-3">
-            <span class="fw-bold">Description:</span>  In the Supermarket Management System Database project, SQL (Structured Query Language) serves as the backbone for managing and manipulating data within the Microsoft SQL Server (MSSQL) environment. SQL is instrumental in various phases of the project,
-             from database creation and data entry to complex queries and data analytics. 
-          </h3>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <a target="_blank" href="https://github.com/youssef-azam/Data_Warehouse_supermarket-"><button type="button" class="btn btn-primary">Go To Github   <i class="fa-brands fa-github"></i></button></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-4 fw-bold" id="exampleModalLabel7">Data Visualization(Power BI/Tableau)</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body bg-secondary bg-opacity-10 ">
-            <h2 class="fs-6">
-              <span class="fw-bold">Project:</span> Data Warehouse Supermarket(Visualization).
-            </h2>    
-          <h3 class="fs-6 mt-3">
-            <span class="fw-bold">Description:</span>  Power BI, a powerful business analytics tool from Microsoft, will be used extensively in the Data_Warehouse_Supermarket project to transform raw data into meaningful insights. By leveraging Power BI's robust data visualization and reporting capabilities, we aim to provide supermarket stakeholders
-             with actionable intelligence to drive informed decision-making and enhance operational efficiency. 
-          </h3>
-
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <a target="_blank" href="https://github.com/youssef-azam/Data_Warehouse_supermarket-"><button type="button" class="btn btn-primary">Go To Github   <i class="fa-brands fa-github"></i></button></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-4 fw-bold" id="exampleModalLabel8">Data Visualization(Power BI/Tableau)</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body bg-secondary bg-opacity-10 ">
-            <h2 class="fs-6">
-              <span class="fw-bold">Project:</span> Financial Insights with Power BI.
-            </h2>    
-          <h3 class="fs-6 mt-3">
-            <span class="fw-bold">Description:</span>In the realm of financial analysis, gaining quick and actionable insights into key metrics is paramount for effective decision-making. This project leverages Power BI to create a dynamic financial report, offering a comprehensive overview of crucial financial metrics, segmented by various categories and dimensions. The dashboard provides a user-friendly interface to explore financial performance, helping businesses optimize their strategies and improve profitability.
-             with actionable intelligence to drive informed decision-making and enhance operational efficiency. 
-          </h3>
-          <div class="img my-3">
-            <img class="w-100" src="images/p88.jpg" alt="">
-          </div>
-          <div class="img my-3">
-            <img class="w-100" src="images/p888.jpg" alt="">
-          </div>
-          <div class="img my-3">
-            <img class="w-100" src="images/p8888.jpg" alt="">
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <a target="_blank" href="https://github.com/youssef-azam/Financial-Insights-with-Power-BI-"><button type="button" class="btn btn-primary">Go To Github   <i class="fa-brands fa-github"></i></button></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-4 fw-bold" id="exampleModalLabel9">Data Visualization Tableau</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body bg-secondary bg-opacity-10 ">
-            <h2 class="fs-6">
-              <span class="fw-bold">Project:</span> Sales Analysis
-            </h2>    
-          <h3 class="fs-6 mt-3">
-            <span class="fw-bold">Description:</span>The primary objective of the "Dashboard Sales Analysis" project is to provide a comprehensive and insightful overview of sales performance through a visually engaging dashboard. The dashboard should offer real-time or periodic data analysis,
-             enabling stakeholders to make informed decisions and identify trends to enhance overall sales strategy. 
-          </h3>
-          <div class="img my-3">
-            <img class="w-100" src="images/p9999.jpg" alt="">
-          </div>
-          <div class="img my-3">
-            <img class="w-100" src="images/p999.jpg" alt="">
-          </div>
-          <div class="img my-3">
-            <img class="w-100" src="images/p99.jpg" alt="">
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <a target="_blank" href="https://github.com/youssef-azam/Data-visualization-Using-Tableau"><button type="button" class="btn btn-primary">Go To Github   <i class="fa-brands fa-github"></i></button></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-4 fw-bold" id="exampleModalLabel10">Business intelligence Developer</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body bg-secondary bg-opacity-10 ">
-            <h2 class="fs-6">
-              <span class="fw-bold">Project:</span> Data Warehouse Supermarket.
-            </h2>    
-          <h3 class="fs-6 mt-3">
-            <span class="fw-bold">Description:</span>In the modern retail landscape, efficient and accurate data management is crucial for the smooth operation and success of any supermarket. The Supermarket Management System Database project aims to develop a comprehensive database solution that streamlines various aspects of supermarket operations, from inventory management and sales tracking to customer relationship management and business analytics. 📊
-            This project will encompass the entire lifecycle of database development, including the design, implementation, and deployment phases. The end goal is to create a robust and scalable database in Microsoft SQL Server (MSSQL) that supports the supermarket's business needs and provides actionable insights through advanced reporting and data analytics tools such as Power BI.
-          </h3>
-          <div class="img my-3">
-            <img class="w-100" src="images/p100.jpg" alt="">
-          </div>
-          <div class="img my-3">
-            <img class="w-100" src="images/p1000.jpg" alt="">
-          </div>
-          <div class="img my-3">
-            <img class="w-100" src="images/p10000.jpg" alt="">
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <a target="_blank" href="https://github.com/youssef-azam/Data_Warehouse_supermarket-"><button type="button" class="btn btn-primary">Go To Github   <i class="fa-brands fa-github"></i></button></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-4 fw-bold" id="exampleModalLabel11">Breast Cancer Analysis Using Power bi</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body bg-secondary bg-opacity-10 ">
-            <h2 class="fs-6">
-              <span class="fw-bold">Project:</span> Breast Cancer Analysis Using Power bi.
-            </h2>    
-          <h3 class="fs-6 mt-3">
-            <span class="fw-bold">Description:</span>This project addresses one of the most critical health issues affecting women globally: breast cancer. The data analysis in this project aims to assist doctors in making accurate diagnoses and determining the most effective treatment plans for patients. By analyzing the tumor's response to estrogen receptors and evaluating the severity and spread of the disease,
-             the project categorizes the condition into three stages (1-2-3) representing the intensity.
-          </h3>
-          <div class="img my-3">
-            <img class="w-100" src="images/p111.jpg" alt="">
-          </div>
-          <div class="img my-3">
-            <img class="w-100" src="images/p1111.jpg" alt="">
-          </div>
-          
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <a target="_blank" href="https://github.com/youssef-azam/Breast-Cancer-Analysis-"><button type="button" class="btn btn-primary">Go To Github   <i class="fa-brands fa-github"></i></button></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-4 fw-bold" id="exampleModalLabel12">Excel for Data Cleaning and Preparation</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body bg-secondary bg-opacity-10 ">
-            <h2 class="fs-6">
-              <span class="fw-bold">Project:</span> Healthcare Facility Staff Analysis Using Excel.
-          <h3 class="fs-6 mt-3">
-            <span class="fw-bold">Description:</span>The project aims to analyze and present comprehensive data on the staff composition of a healthcare facility. 
-            The analysis includes gender distribution, job roles, departmental allocation, and nationalities of the employees.
-          </h3>
-          <div class="img my-3">
-            <img class="w-100" src="images/p122.jpg" alt="">
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <a target="_blank" href="https://github.com/youssef-azam/Data_science_project-s/blob/main/Data%20science%20Project's/Excel/Copy%20of%20RT%20Staff%20list%202023.pdf"><button type="button" class="btn btn-primary">Go To Github   <i class="fa-brands fa-github"></i></button></a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-   <!-- model end   -->
-
-   <!-- start of contact section -->
-   <section id="contact" class=" py-3 d-flex flex-column justify-content-center align-items-center">
-    <p class="text-white fs-3 ">Contact Me</p>
-    <ul class="d-flex list-unstyled my-3">
-      <li class="mx-2 fs-4">
-        <a class="text-white" target="_blank" href="https://wa.link/a7hdj7"><i class="fa-brands fa-whatsapp" ></i></a>
-      </li>
-      <li class="mx-2 fs-4 ">
-        <a class="text-white" target="_blank" href="mailto:youssefazam99@gmail.com"><i class="fab fa-google"></i></a>
-      </li>
-    </ul>
-    <p class="text-white">© youssef azam. All rigths reserved</p>
-  </section>
-   <!-- end of contact section -->
-   
-</main>
-
-    <!-- animation -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/script.js"></script>
     <script>
-      AOS.init();
-    </script>
-    <!-- typed js library -->
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed('#element', {
-          strings: [' Yousef Azam', 'Business Intelligence Developer'],
-          typeSpeed: 60,
-          loop: true,
-          showCursor: false,
-          
+        AOS.init({
+            once: true,
+            offset: 50,
+            duration: 800
         });
-      </script>
-      <!-- js / bootstrap -->
-    <script src="js/bootstrap.bundle.min.js"></script>
+    </script>
 </body>
+
 </html>
