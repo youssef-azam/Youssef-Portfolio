@@ -536,8 +536,51 @@ ul {
 .timeline-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 1rem;
+}
+
+.timeline-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.company-logo-container {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.company-logo-container.has-white-bg {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.company-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(1) opacity(0.7) brightness(1.2);
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover .company-logo {
+  filter: grayscale(0) opacity(1) brightness(1);
+}
+
+.timeline-content:hover .company-logo-container {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.15);
 }
 
 .timeline-title {
@@ -885,6 +928,7 @@ ul {
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
   
   .timeline::before {
@@ -898,6 +942,7 @@ ul {
     margin-right: 0 !important;
     padding-left: 45px !important;
     padding-right: 0 !important;
+    margin-bottom: 1.75rem !important;
   }
   
   .timeline-dot {
@@ -913,7 +958,12 @@ ul {
   
   .timeline-header {
     flex-direction: column;
+    align-items: flex-start;
     gap: 0.5rem;
+  }
+  
+  .timeline-brand {
+    gap: 0.75rem;
   }
 }
 
@@ -923,12 +973,12 @@ ul {
   }
   
   .section-padding {
-    padding: 4rem 0;
+    padding: 2.5rem 0;
   }
 
   .section-title {
     font-size: 1.8rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
   }
 
   .hero-text h1 {
@@ -942,13 +992,14 @@ ul {
 
   .hero-description {
     font-size: 0.95rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.25rem;
   }
 
   .hero-actions {
     flex-direction: column;
     gap: 0.75rem;
     width: 100%;
+    margin-bottom: 2rem;
   }
 
   .hero-actions .btn {
@@ -957,19 +1008,19 @@ ul {
   }
 
   .stat-card {
-    padding: 1rem;
+    padding: 0.75rem 1rem;
   }
 
   .stat-number {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   .stat-label {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
   }
 
   .timeline-content, .project-content, .edu-card {
-    padding: 1.25rem;
+    padding: 1rem;
   }
 
   .contact-box {
@@ -984,6 +1035,28 @@ ul {
 
   .services-grid, .skills-container {
     grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .skill-category {
+    padding: 1.25rem;
+  }
+
+  .skill-category h3 {
+    margin-bottom: 1rem;
+  }
+
+  .skill-tags {
+    gap: 0.5rem;
+  }
+
+  .skill-tag {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .project-img-container {
+    height: 180px;
   }
 
   .hero-image-backdrop {
@@ -991,5 +1064,11 @@ ul {
     left: 10px;
     width: calc(100% - 10px);
     height: calc(100% - 10px);
+  }
+  
+  .about-text p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
   }
 }
