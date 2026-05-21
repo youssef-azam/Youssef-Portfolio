@@ -996,7 +996,7 @@ ul {
   }
 
   .section-padding {
-    padding: 3rem 0;
+    padding: 1.5rem 0;
   }
 }
 
@@ -1006,12 +1006,12 @@ ul {
   }
   
   .section-padding {
-    padding: 1.5rem 0;
+    padding: 1rem 0;
   }
 
   .section-title {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
   }
 
   .hero-text h1 {
